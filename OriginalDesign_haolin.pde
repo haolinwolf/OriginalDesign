@@ -1,4 +1,4 @@
-int sunY=360;
+
 int carX= -100;
 void setup()
 {
@@ -8,18 +8,15 @@ void setup()
 }
 
 void draw()
-{ sunY=sunY-1; 
+{ 
   carX=carX+3;
-background (100,sunY,296);
-  sun();
+  background (100,350,296);
+ 
   road();
   grass();
   taxi();
   wheels();
-  if(sunY>-100)
-  {
-  	sunY=360;
-  }
+
   if(carX>450) 
   {
   	carX=-100;
@@ -28,13 +25,6 @@ background (100,sunY,296);
  
 }
 
-void sun()
-{
-	
-	fill(237,191,98);
-	ellipse(200,sunY,150,150);
-	
-}
 
 void road()
 {
